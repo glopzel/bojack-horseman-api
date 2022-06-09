@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const PORT = 8000;
+
+app.use(cors());
 
 // the Bobs Burgers API had each character with an ID, to add or not to add
 const data = {
@@ -285,6 +288,6 @@ app.get('/api/:name', (request, response) => {
     };
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`listening on the port localhost:${PORT}, go catch it!`);
 })
