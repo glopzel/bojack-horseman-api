@@ -2,7 +2,7 @@
 
 This is an API of Bojack... Horseman obviously. So far it has 50 characters, each with their name, species and voice person. 
 
-## The link herself
+## The link almighty
 
 This is the link to get to the data: https://bojack-horseman-api.herokuapp.com/api/ 
 
