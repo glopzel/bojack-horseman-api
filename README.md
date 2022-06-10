@@ -4,7 +4,7 @@ This is an API of Bojack... Horseman obviously. So far it has 50 characters, eac
 
 ## The link herself
 
-This is the link to get to the data: https://bojack-horseman-api.herokuapp.com/api/characters 
+This is the link to get to the data: https://bojack-horseman-api.herokuapp.com/api/ 
 
 ## How do you look them up? 
 
