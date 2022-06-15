@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(68,113,188);
+background: linear-gradient(180deg, rgba(68,113,188,1) 0%, rgba(67,144,208,1) 6%, rgba(188,198,233,1) 47%, rgba(220,205,236,1) 76%, rgba(243,131,199,1) 89%, rgba(234,16,195,1) 100%);
+background-image: url('ending.webp');
+background-repeat: none;
+background-size: cover;
+}
+
+section {
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.6);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+padding: 4vmin;
+margin: 4vmin;
+text-align: center;
+}
+
+h1, p {
+    font-size: clamp(1rem, 2vw, 3rem);
+}
