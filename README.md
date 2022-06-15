@@ -4,6 +4,8 @@ This is an API of Bojack... Horseman obviously. So far it has 50 characters, eac
 
 ## The link almighty
 
+Link to the site: https://bojack-horseman-api.herokuapp.com/ 
+
 This is the link to get to the data: https://bojack-horseman-api.herokuapp.com/api/ 
 
 ## How do you look them up? 
@@ -12,13 +14,13 @@ All characters were cut to a max of 2 words, because writing Hollyhock Manheim-M
 - Character actress Margo Martindale is searched as character actress
 - Officer Meow Meow Fuzzyface is Meow Meow.
 
-https://bojack-horseman-api.herokuapp.com/api/maude will result in `{"name":"Maude","voice":"Echo Gillette","species":"Rabbit"} `  
+https://bojack-horseman-api.herokuapp.com/api/maude will result in `{"name":"Maude","voice":"Echo Gillette","species":"Rabbit"} ` 
 
 ## How mas it made
 
-#### Tech used: Node.js , Express.js, Heroku
+#### Tech used
 
-So for this one i used Node.js + Express.js and Heroku, it has 1 HTML page but i'm still unsure if i'll style it or not.
+Node.js + Express.js and Heroku. 
 
 ## Future Plans
 
