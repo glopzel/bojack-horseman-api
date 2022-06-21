@@ -41,13 +41,6 @@ MongoClient.connect(connectionStr)
 })
 .catch(error => console.error(error));
 
-// handles unkown endpoint, if they enter something random
-const unknownEndpoint = (request, response) => {
-    response.status(404).send({ error: 'unknown endpoint' })
-}
-
-app.use(unknownEndpoint);
-
 app.listen(process.env.PORT || PORT, () => {
     console.log(`server running port localhost:${PORT}, go catch it!`);
 });

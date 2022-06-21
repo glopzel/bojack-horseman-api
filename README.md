@@ -10,9 +10,7 @@ This is the link to get to the data: https://bojack-horseman-api.herokuapp.com/a
 
 ## How do you look them up? 
 
-All characters were cut to a max of 2 words, because writing Hollyhock Manheim-Mannheim-Gerrero-Robinson-Zilberschlag-Hsung-Fonzerelli-McQuack was going to be too much every time, she is just Hollyhock Manheim.
-- Character actress Margo Martindale is searched as character actress
-- Officer Meow Meow Fuzzyface is Meow Meow.
+All characters were cut to a max of 2 words, because writing Hollyhock Manheim-Mannheim-Gerrero-Robinson-Zilberschlag-Hsung-Fonzerelli-McQuack was going to be too much every time, so in that case she is just Hollyhock. 
 
 https://bojack-horseman-api.herokuapp.com/api/maude will result in `{"name":"Maude","voice":"Echo Gillette","species":"Rabbit"} ` 
 
