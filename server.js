@@ -9,6 +9,7 @@ require('dotenv').config()
 let connectionStr = process.env.DB_STRING;
 
 app.use(cors());
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
 const titleCase = (name) => {
