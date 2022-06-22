@@ -7,7 +7,7 @@ const dotenv = require('dotenv')
 
 dotenv.config()
 
-let connectionStr = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.mnbxxif.mongodb.net/?retryWrites=true&w=majority`
+let connectionStr = process.env.DB_STRING;
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }))
