@@ -6,7 +6,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 require('dotenv').config()
 
-const connectionStr = process.env.DB_STRING;
+let connectionStr = process.env.DB_STRING;
 
 app.use(cors());
 app.use(express.json());
@@ -17,7 +17,7 @@ const titleCase = (name) => {
 
 app.use(express.static(__dirname + '/public'))
 
-MongoClient.connect(connectionStr)
+MongoClient.connect(connectionStr, { useUnifiedTopology: true })
     .then(client => {
         console.log('connected to database');
         
