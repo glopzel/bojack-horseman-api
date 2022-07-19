@@ -28,7 +28,30 @@ MongoClient.connect(connectionStr, { useUnifiedTopology: true })
         db = client.db(dbName);
         
         infoCollection = db.collection('bojack-info'); 
-        
+
+        // infoCollection.insertOne( { 
+        //     "name": "",  
+        //     "voice": "",
+        //     "species": "",
+        //     "aliases": [""],
+        //     "first appearance": "",
+        //     "last appearance": "",
+        //     "filmography": [""],
+        //     "occupation": [""]
+        // }); 
+
+        infoCollection.insertOne( { 
+            "name": "",  
+            "voice": "",
+            "species": "",
+            "aliases": [""],
+            "first appearance": "",
+            "last appearance": "",
+            "filmography": [""],
+            "occupation": [""]
+        });
+        console.log('passed this point')
+
 })
 .catch(error => console.error(error));
 
