@@ -1,16 +1,16 @@
 # bojack-horseman-api
 
-This is an API of Bojack... Horseman obviously. So far it has 50 characters, each with their name, species and voice person. 
+This is an API of Bojack... Horseman obviously. So far it has 90+ characters, each with their name, species and voice person. 
 
 ## The link almighty
 
 Link to the site: https://bojack-horseman-api.herokuapp.com/ 
 
-This is the link to get to the data: https://bojack-horseman-api.herokuapp.com/api/characters/{character name} 
+This is the link to get to the data by name: https://bojack-horseman-api.herokuapp.com/api/characters/{princess carolyn} 
 
-## How do you look them up? 
+Get characters by species: https://bojack-horseman-api.herokuapp.com/api/characters/species/{horse}
 
-All characters were cut to a max of 2 words, because writing Hollyhock Manheim-Mannheim-Gerrero-Robinson-Zilberschlag-Hsung-Fonzerelli-McQuack was going to be too much every time, so in that case she is just Hollyhock. 
+## Example of result 
 
 `https://bojack-horseman-api.herokuapp.com/api/characters/mr peanutbutter` will result in 
 ```json
@@ -27,7 +27,7 @@ All characters were cut to a max of 2 words, because writing Hollyhock Manheim-M
 
 #### Tech used
 
-Node.js + Express.js and Heroku. 
+MongoDB, Node, Express and Heroku
 
 ## Future Plans
 

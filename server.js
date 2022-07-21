@@ -29,28 +29,7 @@ MongoClient.connect(connectionStr, { useUnifiedTopology: true })
         
         infoCollection = db.collection('bojack-info'); 
 
-        // infoCollection.insertOne( { 
-        //     "name": "",  
-        //     "voice": "",
-        //     "species": "",
-        //     "aliases": [""],
-        //     "first appearance": "",
-        //     "last appearance": "",
-        //     "filmography": [""],
-        //     "occupation": [""]
-        // }); 
-
-        infoCollection.insertOne( { 
-            "name": "",  
-            "voice": "",
-            "species": "",
-            "aliases": [""],
-            "first appearance": "",
-            "last appearance": "",
-            "filmography": [""],
-            "occupation": [""]
-        });
-        console.log('passed this point')
+        // console.log('passed this point')
 
 })
 .catch(error => console.error(error));
@@ -71,6 +50,18 @@ app.get('/api/characters/:name', (request, response) => {
             console.error(error);
         })
 });
+
+app.get('/api/characters/species/:sp', (request, response) => {
+    const characterSpecies = titleCase(request.params.sp)
+
+    infoCollection.find({"species": characterSpecies}).toArray()
+        .then(results => {
+            response.json(results);
+        })
+        .catch(error => {
+            console.error(error);
+    })
+})
 
 app.listen(process.env.PORT || PORT, () => {
     console.log(`server running port localhost:${PORT}, go catch it!`);
