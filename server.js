@@ -39,10 +39,9 @@ app.get('/', (request, response) => {
 });
 
 app.get('/api/characters/:name', (request, response) => {
-    const characterName = request.params.name;
-    const fancyName = titleCase(characterName);
+    const characterName = titleCase(request.params.name);
 
-    infoCollection.find({"name": fancyName}).toArray()
+    infoCollection.find({"name": characterName}).toArray()
         .then(results => {
             response.json(results[0]);
         })
