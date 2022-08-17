@@ -53,7 +53,6 @@ nav ul li {
 nav ul li a {
   display: inline-block;
   width: 80%;
-  /* border: 1px solid red; */
   font-size: 1rem;
   font-size: clamp(0.8rem, 2vw, 1rem);
   text-decoration: none;
@@ -76,15 +75,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url("ending.webp"); */
   background-image: url("https://ik.imagekit.io/a8p7pl7hs/sites/philbertbaloon_KLudImTyx.png?ik-sdk-version=javascript-1.4.3&updatedAt=1660629266152");
 }
 
 /* FONT SIZES, HEADINGS, As, Ps */
 h1 {
-  /* background: rgba(255, 255, 255, 0.8); */
   background: white;
-  /* filter: blur(0.5px); */
   border-radius: 3px;
   padding: 2vmin;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
@@ -108,17 +104,9 @@ h3 {
   margin-top: 5vmin;
 }
 
-/* h3 {
-  border-bottom: 1px solid hsl(205, 55%, 68%);
-} */
-
 h3, p, a {
   font-size: clamp(1rem, 2vw, 1.5rem);
 }
-
-/* p, a {
-  font-size: clamp(0.8rem, 2vw, 1rem);
-} */
 
 p {
   text-align: justify;
@@ -137,16 +125,12 @@ a {
 }
 
 pre {
-  /* border: 1px solid black; */
-  /* border-style: dashed; */
   border-radius: 3px;
   overflow-x: scroll;
   background: var(--col-bb-blue);
 }
 
 .docs-block {
-  /* border-left: 1px dashed black;
-  border-right: 1px dashed black; */
   width: 70%;
   margin-left: 15%;
 }
@@ -163,7 +147,6 @@ table {
 
 thead {
   background: var(--col-bb-blue);
-  /* text-align: left; */
 }
 
 th {
