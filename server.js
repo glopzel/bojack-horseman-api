@@ -3,13 +3,13 @@ const app = express();
 const cors = require('cors');
 const PORT = 8000;
 const MongoClient = require('mongodb').MongoClient;
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
 
 dotenv.config()
 
 let connectionStr = process.env.DB_STRING;
-let db, infoCollection, dbName = 'bojack-api'
-
+let db, endpoints, infoCollection, seasonsCollection, dbName = 'bojack-api'
+// bojack-api is the main database, bojack-info is the collection that has the characters
 app.use(cors());
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
@@ -26,11 +26,12 @@ MongoClient.connect(connectionStr, { useUnifiedTopology: true })
         console.log('connected to database');
         
         db = client.db(dbName);
-        
-        infoCollection = db.collection('bojack-info'); 
-
-        // console.log('passed this point')
-
+        // infoCollection, bojack-info has the characters
+        infoCollection = db.collection('bojack-info');
+        // seasons collection has info on seasons and episodes 
+        seasonsCollection = db.collection('bojack-seasons');
+        // a collection for all the links/endpoints, the mother of endpoints
+        endpoints = db.collection('endpoints')
 })
 .catch(error => console.error(error));
 
@@ -38,28 +39,46 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 });
 
+app.get('/api', (request, response) => {
+    endpoints.find({'_id': '1'}).toArray()
+    .then(result => response.json(result[0].endpoints))
+    .catch(err => console.error(err))
+})
+
+// getcharacter by name
 app.get('/api/characters/:name', (request, response) => {
     const characterName = titleCase(request.params.name);
 
     infoCollection.find({"name": characterName}).toArray()
-        .then(results => {
-            response.json(results[0]);
-        })
-        .catch(error => {
-            console.error(error);
-        })
+    // results[0] because it is only 1
+        .then(results => response.json(results[0]))
+        .catch(error => console.error(error))
 });
 
+// get character by species
 app.get('/api/characters/species/:sp', (request, response) => {
     const characterSpecies = titleCase(request.params.sp)
-
+    // you get multiple elements so results shouldn be result[0]
     infoCollection.find({"species": characterSpecies}).toArray()
-        .then(results => {
-            response.json(results);
-        })
-        .catch(error => {
-            console.error(error);
-    })
+        .then(results => response.json(results))
+        .catch(error => console.error(error))
+})
+
+// get voice person
+app.get('/api/characters/voice/:voice', (req, res) => {
+    const voiceAct = titleCase(req.params.voice)
+    // you get multiple elements so results shouldn be result[0]
+    infoCollection.find({"voice" : voiceAct}).toArray()
+        .then(results => res.json(results))
+        .catch(err => console.error(err))
+})
+
+// get episodes by seasons
+app.get('/api/seasons/:num', (request, response) => {
+    const season = request.params.num
+    seasonsCollection.find({'season': season}).toArray()
+    .then(result => response.json(result[0]))
+    .catch(err => console.error(err))
 })
 
 app.listen(process.env.PORT || PORT, () => {

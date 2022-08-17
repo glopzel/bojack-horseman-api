@@ -14,20 +14,387 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <main>
+    <header class="background-general">
+        <nav>
+            <ul class="flex">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#intro">Root URL</a></li>
+                <li><a href="#characters-section">Characters</a></li>
+                <li><a href="#seasons-section">Seasons</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="background-general" id="home">
         <section>
             <h1>BoJack Horseman API</h1>
-
-            <p>https://bojack-horseman-api.herokuapp.com/api/</p>
-            <p>By names: characters/{bojack horseman}</p>
-            <p>By species: characters/species/{horse}</p>
-
-            <a href="https://github.com/glopzel/bojack-horseman-api" target="_blank">Github Repo</a>
         </section>
-        
     </main>
     
+    <div class="docs-block">
+        <section id="intro">
+            <h2 id="intro-header">Introduction</h2>
+            <div>
+                <p>
+                    The BoJack Horseman API is based on the BoJack Horseman Netflix series. Data for characters in this API include name, species, aliases, first and last appearances, occupation, and other information.
+                </p>
+            </div>
+            <!-- end of intro -->
+        </section>
+
+        <!-- endpoints container -->
+        <section id="urls-start">
+            <h2>Endpoints</h2>
+            <!-- endpoints-block has the content -->
+            <section id="endpoints-block">
+                <h3>
+                    Root URL
+                </h3>
+                <p>
+                    The Root endpoint provides the information for all the url endpoints within the API. All Requests are GET requests sent over HTTPS.
+                </p>
+                <p>Result of searching <a class="api-link" href="https://bojack-horseman-api.herokuapp.com/api/">https://bojack-horseman-api.herokuapp.com/api</a> :</p>
+
+<div class="code-container flex">
+<pre>
+    <code>{ 
+        "characters": "https://bojack-horseman-api.herokuapp.com/api/characters/{character name}",
+        "species": "https://bojack-horseman-api.herokuapp.com/api/characters/species/{character species}",
+        "voice": "https://bojack-horseman-api.herokuapp.com/api/characters/voice/{voice person name}",
+        "seasons": "https://bojack-horseman-api.herokuapp.com/api/seasons/{number 1 - 6}"
+    }</code>
+</pre>
+</div>
+
+<!-- CHARACTERS -->
+<section id="characters-section" class="docs-detail">
+    <h3>
+        GET Characters
+    </h3>
+    <p>When requesting a character by their name, voice person or species, you will get either an object or an array of objects. Each object will have a minimum of 7 keys, and certain characters will have an additional 1 or 2 keys to indicate their filmography and/or breed.</p>
+
+    <div class="table-block">
+        <table>
+            <caption>
+                Details on the keys and values of each character object
+            </caption>
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value Type</th>
+                    <th>Content</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>name</td>
+                    <td>String</td>
+                    <td>Name of the character</td>
+                </tr>
+                <tr>
+                    <td>voice</td>
+                    <td>String</td>
+                    <td>Voice person</td>
+                </tr>
+                <tr>
+                    <td>species</td>
+                    <td>String</td>
+                    <td>The character's species name</td>
+                </tr>
+                <tr>
+                    <td>aliases</td>
+                    <td>Array</td>
+                    <td>Character's aliases</td>
+                </tr>
+                <tr>
+                    <td>first appearance</td>
+                    <td>String</td>
+                    <td>The first time they appear in an episode</td>
+                </tr>
+                <tr>
+                    <td>last appearance</td>
+                    <td>String</td>
+                    <td>The last time they appear in an episode</td>
+                </tr>
+                <tr>
+                    <td>occupation</td>
+                    <td>Array</td>
+                    <td>History of occupations</td>
+                </tr>
+                <tr>
+                    <td>filmography</td>
+                    <td>Array</td>
+                    <td>Additional key, returns the filmography of the character</td>
+                </tr>
+                <tr>
+                    <td>breed</td>
+                    <td>String</td>
+                    <td>Additional key, returns breed of animal</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+
+    <div class="under-table-block">
+        <p>Result of searching bojack horseman with {rootURL}/<a href="https://bojack-horseman-api.herokuapp.com/api/characters/bojack%20horseman" target="_blank">characters/bojack horseman</a> :</p>
+    </div>
+    
+
+<div class="code-container flex">
+<pre>
+    <code>{
+        "_id": "62a978fbc39257f9bf963651",
+        "name": "Bojack Horseman",
+        "voice": "Will Arnett",
+        "species": "Horse",
+        "aliases": [
+            "BoJ",
+            "BJ",
+            "Chadwick Boseman",
+            "BJ Novak",
+            "BoJangles",
+            "JockJam DoorSlam",
+            "Hambone Fakenamington",
+            "BoBo the Angsty Zebra",
+            "Horse Guy",
+            "Horse Professor",
+            "Dead Body #4"
+        ],
+        "first appearance": "BoJack Horseman: The BoJack Horseman Story, Chapter One",
+        "last appearance": "Nice While It Lasted",
+        "filmography": [
+            "Secretariat",
+            "Horsin' Around",
+            "The BoJack Horseman Show",
+            "Hollywoo Stars and Celebrities: What Do They Know? Do They Know Things?? Let's Find Out! (HSAC!WDTK?DTKT??LFO!)",
+            "Ethan Around",
+            "Felicity Huffman's Booty Academy: Los Angeles",
+            "Philbert"
+        ],
+        "occupation": [
+            "Drama Professor at Wesleyan University (formerly)",
+            "actor",
+            "owner of the restaurand Elephante (formerly)",
+            "amateur standup comedian (formerly=",
+            "bartender at elefanté (formerly="
+        ]
+    }</code>
+</pre>
+</div>
+
+<p>
+    Requests for voice actors and species act as filters that return arrays of objects with the characters that fulfill the request. All the data listed above will be present in each of these objects.
+</p>
+<p>
+    Response for {rootURL}/characters/<a href="https://bojack-horseman-api.herokuapp.com/api/characters/voice/alison brie" target="_blank">voice/Alison Brie</a>
+</p>
+<div class="code-container flex">
+<pre>
+    <code>[
+        {
+            "_id": "62aa3a591d75a1a4d3afffed",
+            "name": "Diane Nguyen",
+            "voice": "Alison Brie",
+            "species": "Human",
+            "aliases": [
+                "Blarn",
+                "Deedee",
+                "Cryanne",
+                "Asian Daria",
+                "Diabolical Thin Mint",
+                "Glasses",
+                "Princess Diana/Diana Princess of Wales",
+                "Diana"
+            ],
+            "first appearance": "BoJack Horseman: The BoJack Horseman Story, Chapter One",
+            "last appearance": "Nice While It Lasted",
+            "occupation": [
+                "Author of Ivy Tran, Food Court Detective",
+                "Writer",
+                "Ghostwriter (formerly)",
+                "Celebrity Tweet Ghostwriter",
+                "Consulting producer for 'Philbert' (formerly)",
+                "Character consultant for Secretariat (formerly)",
+                "Barista (formerly)",
+                "Caterer (formerly)"
+            ]
+        },
+        {
+            "_id": "62aaa3c31d75a1a4d3affff3",
+            "name": "Vincent Adultman",
+            "voice": "Alison Brie",
+            "species": "Human",
+            "aliases": [
+                "Bea",
+                "Grammy Gram"
+            ],
+            "first appearance": "Horse Majeure",
+            "last appearance": "Higher Love",
+            "occupation": [
+                "Business Manager"
+            ]
+        },
+        {
+            "_id": "62b53da34a166ae969a6d7db",
+            "name": "Cammie",
+            "voice": "Alison Brie",
+            "species": "Human",
+            "aliases": [
+                "none"
+            ],
+            "first appearance": "The Telescope",
+            "last appearance": "A Horse Walks Into Rehab",
+            "occupation": [
+                "Member of the Celebrity Stealing Club"
+            ]
+        },
+    ]</code>
+</pre>
+</div>
+
+<p>
+    Response for {rootURL}/characters/<a href="https://bojack-horseman-api.herokuapp.com/api/characters/species/cat">species/cat</a>
+</p>
+<div class="code-container flex">
+<pre>
+    <code>[
+        {
+            "_id": "62aa31861d75a1a4d3afffec",
+            "name": "Princess Carolyn",
+            "voice": "Amy Sedaris",
+            "species": "Cat",
+            "aliases": [
+                "PC",
+                "Tangled Fog of Pulsating Yearning in the Shape Of A Woman",
+                "Priscilla Crustacean",
+                "Pink Cat Lady"
+            ],
+            "first appearance": "BoJack Horseman: The BoJack Horseman Story, Chapter One",
+            "last appearance": "Nice While It Lasted",
+            "occupation": [
+                "Manager (currently)",
+                "Head of her own production studio (currently)",
+                "Owner of VIM Management (currently)",
+                "Producer of 'Philbert' (formerly)",
+                "Producer of 'Birthday Dad' (formerly)",
+                "Talent agent at Vigor Agency (formerly)",
+                "Secretary/assistant for Marv Sbarbori (formerly)",
+                "Intern at Vigor Agency (formerly)"
+            ],
+            "breed": "Persian"
+        },
+        {
+            "_id": "62d4f8b69e4938ea6187ca4a",
+            "name": "Copernicus",
+            "voice": "Liev Schreiber",
+            "species": "Cat",
+            "aliases": [
+                "none"
+            ],
+            "first appearance": "Yes And",
+            "last appearance": "Out to Sea",
+            "occupation": [
+                "Founder of Shenanigags"
+            ],
+            "breed": "Persian"
+        },
+        {
+            "_id": "62d639e0fdd0dcd08297edbc",
+            "name": "Cutie Cutie Cupcake",
+            "voice": "David Sedaris",
+            "species": "Cat",
+            "aliases": [
+                "none"
+            ],
+            "first appearance": "The Amelia Earhart Story",
+            "last appearance": "The Amelia Earhart Story",
+            "occupation": [
+                "Maid"
+            ]
+        }
+    ]</code>
+</pre>
+</div>
+
+    <!-- end of characters / .docst-detail -->
+</section>
+
+<!-- SEASONS -->
+<section id="seasons-section" class="seasons-detail">
+    <h3>GET Seasons</h3>
+    <p>
+        When requesting a season by the number of it, you will get an object with the season, the year it was released, and the episode names.
+    </p>
+    <div class="table-block">
+        <table>
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value Type</th>
+                    <th>Content</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>season</td>
+                    <td>String</td>
+                    <td>Number of the season</td>
+                </tr>
+                <tr>
+                    <td>year</td>
+                    <td>String</td>
+                    <td>Year of release</td>
+                </tr>
+                <tr>
+                    <td>episodes</td>
+                    <td>Array</td>
+                    <td>List of episodes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="under-table-block">
+        <p>
+            Result of search for season 1 <a href="https://bojack-horseman-api.herokuapp.com/api/seasons/1">{rootURL}/seasons/1</a>
+        </p>
+    </div>
+    <div class="code-container flex">
+<pre>
+    <code>{
+        "_id""62fb13c70489d143934a059a",
+        "episodes": [
+            "BoJack Horseman: The BoJack Horseman Story, Chapter One",
+            "BoJack Hates The Troops",
+            "Prickly Muffin",
+            "Zoës And Zeldas",
+            "Live Fast, Diane Nguyen",
+            "Our A-Story Is A 'D' Story",
+            "Say Anything",
+            "The Telescope",
+            "Horse Majeure",
+            "One Trick Pony",
+            "Downer Ending",
+            "Later"
+        ],
+        "season": "1",
+        "year": "2014"
+    }</code>
+</pre>
+        </div>
+
+</section>
+                
+                <!-- end of endpoints block -->
+            </section> 
+        <!-- end of docs-block -->
+        </section>
+            
+            
+    </div>
+
+    <footer class="background-general">
+        <p>Created By <a href="https://github.com/glopzel/bojack-horseman-api" target="_blank">ALZ</a></p>
+    </footer>
 
 </body>
 </html>
