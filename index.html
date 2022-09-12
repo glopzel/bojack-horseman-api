@@ -18,7 +18,7 @@
         <nav>
             <ul class="flex">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#intro">Root URL</a></li>
+                <li><a href="#intro">API URL</a></li>
                 <li><a href="#characters-section">Characters</a></li>
                 <li><a href="#seasons-section">Seasons</a></li>
             </ul>
@@ -47,10 +47,10 @@
             <!-- endpoints-block has the content -->
             <section id="endpoints-block">
                 <h3>
-                    Root URL
+                    GET root/api
                 </h3>
                 <p>
-                    The Root endpoint provides the information for all the url endpoints within the API. All Requests are GET requests sent over HTTPS.
+                    This endpoint provides the information for all the url endpoints within the API. All Requests are GET requests sent over HTTPS.
                 </p>
                 <p>Result of searching <a class="api-link" href="https://bojack-horseman-api.herokuapp.com/api/">https://bojack-horseman-api.herokuapp.com/api</a> :</p>
 
@@ -136,7 +136,7 @@
     </div>
 
     <div class="under-table-block">
-        <p>Result of searching bojack horseman with {rootURL}/<a href="https://bojack-horseman-api.herokuapp.com/api/characters/bojack%20horseman" target="_blank">characters/bojack horseman</a> :</p>
+        <p>Result of searching bojack horseman with {rootUrl}/api/<a href="https://bojack-horseman-api.herokuapp.com/api/characters/bojack%20horseman" target="_blank">characters/bojack horseman</a> :</p>
     </div>
     
 
@@ -186,7 +186,7 @@
     Requests for voice actors and species return arrays of character objects. All the data listed above will be present in each of these objects.
 </p>
 <p>
-    Response for {rootURL}/characters/<a href="https://bojack-horseman-api.herokuapp.com/api/characters/voice/alison brie" target="_blank">voice/Alison Brie</a>
+    Response for {rootURL}/api/characters/<a href="https://bojack-horseman-api.herokuapp.com/api/characters/voice/alison brie" target="_blank">voice/Alison Brie</a>
 </p>
 <div class="code-container flex">
 <pre>
@@ -253,7 +253,7 @@
 </div>
 
 <p>
-    Response for {rootURL}/characters/<a href="https://bojack-horseman-api.herokuapp.com/api/characters/species/cat">species/cat</a>
+    Response for {rootURL}/api/characters/<a href="https://bojack-horseman-api.herokuapp.com/api/characters/species/cat">species/cat</a>
 </p>
 <div class="code-container flex">
 <pre>
