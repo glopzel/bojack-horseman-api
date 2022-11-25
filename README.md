@@ -4,7 +4,7 @@ This is an API of Bojack... Horseman obviously. So far it has 90+ characters, ea
 
 ## The link almighty
 
-Link to the site: `https://bojack-horseman-api.onrender.com`
+Link to the site: [https://bojack-horseman-api.onrender.com](https://bojack-horseman-api.onrender.com) 
 
 This is the link to get to the data by name: `https://bojack-horseman-api.onrender.com/api/characters/{princess carolyn}` 
 
