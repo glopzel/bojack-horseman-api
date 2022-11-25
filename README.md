@@ -4,11 +4,11 @@ This is an API of Bojack... Horseman obviously. So far it has 90+ characters, ea
 
 ## The link almighty
 
-Link to the site: https://bojack-horseman-api.herokuapp.com/ 
+Link to the site: `https://bojack-horseman-api.onrender.com`
 
-This is the link to get to the data by name: https://bojack-horseman-api.herokuapp.com/api/characters/{princess carolyn} 
+This is the link to get to the data by name: `https://bojack-horseman-api.herokuapp.com/api/characters/{princess carolyn}` 
 
-Get characters by species: https://bojack-horseman-api.herokuapp.com/api/characters/species/{horse}
+Get characters by species: `https://bojack-horseman-api.herokuapp.com/api/characters/species/{horse}`
 
 ## Example of result 
 
@@ -27,9 +27,9 @@ Get characters by species: https://bojack-horseman-api.herokuapp.com/api/charact
 
 #### Tech used
 
-MongoDB, Node, Express and Heroku
+MongoDB, Node, Express
 
 ## Future Plans
 
-I want to add more characters, the music, seasons and/or episodes.  
+I want to add more characters and the music
 
