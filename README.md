@@ -6,9 +6,9 @@ This is an API of Bojack... Horseman obviously. So far it has 90+ characters, ea
 
 Link to the site: `https://bojack-horseman-api.onrender.com`
 
-This is the link to get to the data by name: `https://bojack-horseman-api.herokuapp.com/api/characters/{princess carolyn}` 
+This is the link to get to the data by name: `https://bojack-horseman-api.onrender.com/api/characters/{princess carolyn}` 
 
-Get characters by species: `https://bojack-horseman-api.herokuapp.com/api/characters/species/{horse}`
+Get characters by species: `https://bojack-horseman-api.onrender.com/api/characters/species/{horse}`
 
 ## Example of result 
 
