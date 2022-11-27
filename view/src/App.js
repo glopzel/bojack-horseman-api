@@ -12,8 +12,8 @@ import introCode from "./codeExamples/introCode";
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
+        <Header />
         <Routes>
           <Route
             path="/"
@@ -60,8 +60,8 @@ function App() {
             }
           />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }

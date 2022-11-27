@@ -4,8 +4,9 @@ import React from 'react'
 
 const CodeBlock = (props) => {
   return (
-    <div>
+    <div className="code-container">
         <CopyBlock
+            className='codeblock'
             text={props.text}
             language={props.language}
             theme={props.theme}

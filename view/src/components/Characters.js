@@ -6,12 +6,12 @@ import bodyTableCharacters from "../codeExamples/charactersTableContent";
 
 const Characters = ({ language, theme, showLineNumbers }) => {
   return (
-    <div>
+    <div className='docs-block'>
       <h3>
         GET Characters
       </h3>
 
-      <p>When requesting a character by their name, voice person or species, you will get either an object or an array of objects. Each object will have a minimum of 7 keys, and certain characters will have an additional 1 or 2 keys to indicate their filmography and/or breed.</p>
+      <p>When requesting a character by their name, voice person or species, you will get either an object or an array of objects. Each object will have a minimum of 7 keys, and certain characters will have an additional 1 or 2 keys to indicate their filmography and/or breed of the animal if it applies.</p>
 
 
       <TableB tableContent={bodyTableCharacters}/>
@@ -33,7 +33,7 @@ const Characters = ({ language, theme, showLineNumbers }) => {
         objects.
       </p>
       <p>
-        Response for rootURL/api/characters/
+        Response for /characters/
         <a
           href="https://bojack-horseman-api.onrender.com/api/characters/voice/alison brie"
           target="_blank"
@@ -56,13 +56,13 @@ const Characters = ({ language, theme, showLineNumbers }) => {
       Response for rootURL/api/characters/<a rel="noopener noreferrer" href="https://bojack-horseman-api.onrender.com/api/characters/species/cat">species/cat</a>
       </p>
 
-      <div>
-      <CodeBlock
-        text={getSpecies}
-        language={language}
-        theme={theme}
-        showLineNumbers={showLineNumbers}
-      />
+      <div className='codeMargin'>
+        <CodeBlock
+          text={getSpecies}
+          language={language}
+          theme={theme}
+          showLineNumbers={showLineNumbers}
+        />
       </div>
     </div>
   );

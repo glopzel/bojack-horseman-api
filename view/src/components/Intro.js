@@ -3,7 +3,7 @@ import CodeBlock from './CodeBlock'
 
 const Intro = ({text, language, theme, showLineNumbers}) => {
   return (
-    <section id="intro">
+    <section id="intro" className='docs-block'>
             <h2 id="intro-header">Introduction</h2>
             <div>
                 <p>

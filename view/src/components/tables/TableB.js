@@ -2,7 +2,7 @@ import React from 'react'
 
 const TableB = ({tableContent}) => {
   return (
-    <div>
+    <div className='table-block'>
         <table>
             <thead>
                 <tr>
@@ -15,7 +15,7 @@ const TableB = ({tableContent}) => {
             <tbody>
                 {tableContent.map((item, index) => {
                     return (
-                        <tr>
+                        <tr key={index}>
                             <td>{item[0]}</td>
                             <td>{item[1]}</td>
                             <td>{item[2]}</td>

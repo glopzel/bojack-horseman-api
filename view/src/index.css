@@ -1,13 +1,180 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --font-dm: 'DM Sans', sans-serif;
+  --font-open: 'Open Sans', sans-serif;
+  --col-bb-blue: hsl(195, 60%, 85%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-open);
+}
+
+.background-general {
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  /* background-image: url("https://ik.imagekit.io/a8p7pl7hs/sites/1philbertcrop_BOSQtvR2m.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660628916740"); */
+  border-bottom: 4px solid var(--col-bb-blue);
+  background: white;
+  position: sticky;
+  top: 0;
+  padding: 0 0.5em;
+  z-index: 1;
+  filter: blur(30%);
+}
+
+header ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header button {
+  background: transparent;
+  border-width: 0px;
+  padding: 0;
+}
+
+header a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1vmin;
+}
+
+header a:hover {
+  text-decoration: underline;
+  z-index: 1;
+  background: var(--col-bb-blue);
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://ik.imagekit.io/a8p7pl7hs/sites/philbertbaloon_KLudImTyx.png?ik-sdk-version=javascript-1.4.3&updatedAt=1660629266152");
+}
+
+.docs-block {
+  width: 70%;
+  margin-left: 15%;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-dm);
+}
+
+h1 {
+  background: white;
+  border-radius: 3px;
+  padding: 2vmin;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+h2 {
+  border-bottom: 1px solid hsl(0, 0%, 0%);
+}
+
+h3 {
+  margin-top: 5vh;
+  margin-left: 5vmin;
+  border-bottom: 1px solid hsl(0, 0%, 50%);
+}
+
+/* p {
+  
+} */
+
+div a, p {
+  text-align: justify;
+  font-size: clamp(1em, 2vw, 1.2em);
+}
+
+a {
+  color: black;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+/* CODE BLOCK CONTAINER */
+.code-container {
+  justify-content: center;
+  overflow: hidden;
+}
+
+.codeblock {
+  overflow-x: scroll;
+}
+
+/* TABLE */
+.table-block {
+  margin-top: 5vh;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+}
+
+thead {
+  background: var(--col-bb-blue);
+}
+
+th {
+  padding: 1vmin 3vmin;
+}
+
+td {
+  padding: 1vmin 3vmin;
+  border-bottom: 1px solid var(--col-bb-blue);
+}
+
+footer {
+  /* background-image: url("https://ik.imagekit.io/a8p7pl7hs/sites/1philbertcrop_BOSQtvR2m.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660628916740"); */
+  background-image: url("https://ik.imagekit.io/a8p7pl7hs/sites/footerblue_7wIlZ9-S5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669589645093");
+  background-repeat: none; 
+  background-size: cover; 
+  background-position: center;
+  /* padding: 3vmin 1vmin; */
+  padding: 0.5em;
+  /* margin-top: 5vmin; */
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+#intro {
+  min-height: 100vh;
+}
+
+.codeMargin {
+  margin-bottom: 3em;
+}
+
+@media (max-width: 520px) {
+  main {
+    background-image: url("https://ik.imagekit.io/a8p7pl7hs/sites/philbert_ZBgylOO1n.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1660628645957");
+    background-position: center bottom;
+  }
+
+  .table-block {
+    overflow: scroll;
+  }
 }
