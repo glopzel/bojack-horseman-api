@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const PORT = 8000;
+const path = require('path');
+const PORT = 3001;
 const MongoClient = require('mongodb').MongoClient;
 const dotenv = require('dotenv');
 
@@ -18,8 +19,26 @@ const titleCase = (name) => {
     return name.toLowerCase().split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ');
 }
 
-app.use(express.static(__dirname + '/public'))
+// app.use(express.static(__dirname + '/public'))
 
+app.use(express.static(path.resolve(__dirname, './view/build')));
+
+// TODO fix this repetition, add controller and routesz 
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './view/build', 'index.html'));
+});
+
+app.get('/intro', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './view/build', 'index.html'))
+})
+
+app.get('/characters', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './view/build', 'index.html'))
+})
+
+app.get('/seasons', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './view/build', 'index.html'))
+})
 
 MongoClient.connect(connectionStr, { useUnifiedTopology: true })
     .then(client => {
@@ -35,9 +54,9 @@ MongoClient.connect(connectionStr, { useUnifiedTopology: true })
 })
 .catch(error => console.error(error));
 
-app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/index.html')
-});
+// app.get('/', (request, response) => {
+//     response.sendFile(__dirname + '/index.html')
+// });
 
 app.get('/api', (request, response) => {
     endpoints.find({'_id': '1'}).toArray()
