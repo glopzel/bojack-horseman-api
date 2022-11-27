@@ -2,7 +2,13 @@ import React from 'react'
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <>
+    <main class="background-general" id="home">
+        <section>
+            <h1>BoJack Horseman API</h1>
+        </section>
+    </main>
+    </>
   )
 }
 

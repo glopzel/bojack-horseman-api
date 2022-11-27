@@ -7,7 +7,7 @@ const Header = () => {
             <a href="/">Home</a>
         </button>
         <button>
-            <a href="/intro">Intro</a>
+            <a href="/intro">Root URL</a>
         </button>
         <button>
             <a href="/characters">Characters</a>
