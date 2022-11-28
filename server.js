@@ -21,7 +21,7 @@ const titleCase = (name) => {
 
 // app.use(express.static(__dirname + '/public'))
 
-app.use(express.static(__dirname, './view/build'));
+app.use(express.static(__dirname, '/view/build'));
 
 // TODO fix this repetition, add controller and routesz 
 app.get('/', (req, res) => {
