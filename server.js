@@ -21,19 +21,19 @@ const titleCase = (name) => {
 
 // app.use(express.static(__dirname + '/public'))
 
-app.use(express.static(path.resolve(__dirname, './view/build')));
+app.use(express.static(__dirname, './view/build'));
 
 // TODO fix this repetition, add controller and routesz 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './view/build', 'index.html'));
+    res.sendFile(__dirname, './view/build', 'index.html');
 });
 
 app.get('/intro', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './view/build', 'index.html'))
+    res.sendFile(__dirname, './view/build', 'index.html');
 })
 
 app.get('/characters', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './view/build', 'index.html'))
+    res.sendFile(__dirname, './view/build', 'index.html');
 })
 
 app.get('/seasons', (req, res) => {
