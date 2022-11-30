@@ -31,5 +31,8 @@ MongoDB, Node, Express, React
 
 ## Future Plans
 
-I want to add more characters and the music
+- I want to add more characters and the music
+- I'm not a designer so a lot to fix there
+- Add options to switch the code theme
+- Make the backend more abstract
 
