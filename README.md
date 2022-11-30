@@ -27,7 +27,7 @@ Get characters by species: `https://bojack-horseman-api.onrender.com/api/charact
 
 #### Tech used
 
-MongoDB, Node, Express
+MongoDB, Node, Express, React
 
 ## Future Plans
 

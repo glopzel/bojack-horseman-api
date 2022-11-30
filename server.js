@@ -19,8 +19,6 @@ const titleCase = (name) => {
     return name.toLowerCase().split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ');
 }
 
-// app.use(express.static(__dirname + '/public'))
-
 app.use(express.static(path.resolve(__dirname, './view/build')));
 
 // TODO fix this repetition, add controller and routesz 
@@ -53,10 +51,6 @@ MongoClient.connect(connectionStr, { useUnifiedTopology: true })
         endpoints = db.collection('endpoints')
 })
 .catch(error => console.error(error));
-
-// app.get('/', (request, response) => {
-//     response.sendFile(__dirname + '/index.html')
-// });
 
 app.get('/api', (request, response) => {
     endpoints.find({'_id': '1'}).toArray()
