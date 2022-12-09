@@ -1,6 +1,5 @@
-import { CopyBlock } from "react-code-blocks";
-
 import React from 'react'
+import { CopyBlock } from "react-code-blocks";
 
 const CodeBlock = (props) => {
   return (

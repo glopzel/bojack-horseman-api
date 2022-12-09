@@ -7,7 +7,7 @@ import Intro from "./components/Intro";
 import Characters from "./components/Characters";
 import Seasons from "./components/Seasons";
 import { atomOneLight } from "react-code-blocks";
-import introCode from "./codeExamples/introCode";
+import introCode from "./components/codeExamples/introCode";
 
 function App() {
   return (

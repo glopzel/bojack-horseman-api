@@ -1,8 +1,8 @@
 import React from "react";
 import CodeBlock from "./CodeBlock";
-import { getCharacter, getVoice, getSpecies } from "../codeExamples/characterCode";
+import { getCharacter, getVoice, getSpecies } from "./codeExamples/characterCode";
 import TableB from "./tables/TableB";
-import bodyTableCharacters from "../codeExamples/charactersTableContent";
+import bodyTableCharacters from "./codeExamples/charactersTableContent";
 
 const Characters = ({ language, theme, showLineNumbers }) => {
   return (
@@ -12,7 +12,6 @@ const Characters = ({ language, theme, showLineNumbers }) => {
       </h3>
 
       <p>When requesting a character by their name, voice person or species, you will get either an object or an array of objects. Each object will have a minimum of 7 keys, and certain characters will have an additional 1 or 2 keys to indicate their filmography and/or breed of the animal if it applies.</p>
-
 
       <TableB tableContent={bodyTableCharacters}/>
 

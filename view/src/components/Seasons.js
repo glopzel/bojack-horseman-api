@@ -1,8 +1,8 @@
 import React from 'react'
 import TableB from './tables/TableB'
-import seasonsTableContent from '../codeExamples/seasonsTableContent'
+import seasonsTableContent from './codeExamples/seasonsTableContent'
 import CodeBlock from './CodeBlock'
-import seasonsCode from '../codeExamples/seasonsCode'
+import seasonsCode from './codeExamples/seasonsCode'
 
 const Seasons = ({language, theme, showLineNumbers}) => {
   return (
