@@ -2,6 +2,10 @@
 
 This is an API of Bojack... Horseman obviously. So far it has 90+ characters, each with their name, species and voice person. 
 
+## Preview
+
+![](https://ik.imagekit.io/a8p7pl7hs/git-previews/bojack_3CoiWkG3C.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1670852191647)
+
 ## The link almighty
 
 Link to the site: [https://bojack-horseman-api.onrender.com](https://bojack-horseman-api.onrender.com) 
@@ -23,11 +27,9 @@ Get characters by species: `https://bojack-horseman-api.onrender.com/api/charact
     "filmography":["Mr. Peanutbutter's House","Hollywoo Stars and Celebrities: What Do They Know? Do They Know Things?? Let's Find Out! (HSAC!WDTK?DTKT??LFO!)","Philbert","Birthday Dad"]}
 ```
 
-## How mas it made
+## Tech used
 
-#### Tech used
-
-MongoDB, Node, Express, React
+MongoDB, Node, Express, React, react-code-blocks and react-router-dom
 
 ## Future Plans
 
