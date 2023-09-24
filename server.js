@@ -89,9 +89,9 @@ app.get("/api/seasons/:num", async (req, res) => {
     res.send(data)
 })
 
-//app.get('*', (req, res) => {
-  //  res.sendFile(path.resolve(__dirname, './view/build', 'index.html'))
-// })
+app.get('*', (req, res) => {
+   res.sendFile(path.resolve(__dirname, './view/build', 'index.html'))
+})
 
 app.listen(process.env.PORT || PORT, () => {
     console.log(`server running port localhost:${PORT}, go catch it!`);
