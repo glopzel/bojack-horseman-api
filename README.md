@@ -16,14 +16,14 @@ Get characters by species: `https://bojack-horseman-api.onrender.com/api/charact
 ```json
 [
     {
-        name: "mr peanutbutter",
-        voice: "paul f. tompkins",
-        species: "dog",
-        first-ep: "BoJack Horseman: The BoJack Horseman Story, Chapter One",
-        last-ep: "Nice While It Lasted",
-        breed: "labrador retriever",
-        id: 6,
-        aliases: [
+        "name": "mr peanutbutter",
+        "voice": "paul f. tompkins",
+        "species": "dog",
+        "first-ep": "BoJack Horseman: The BoJack Horseman Story, Chapter One",
+        "last-ep": "Nice While It Lasted",
+        "breed": "labrador retriever",
+        "id": 6,
+        "aliases": [
             "Mr. Chocolate Hazelnut",
             "Mr. Papernumber",
             "Dog Dog Peanut-Man",
@@ -31,14 +31,14 @@ Get characters by species: `https://bojack-horseman-api.onrender.com/api/charact
             "Mr. Dog-Man",
             "Mister Mr."
         ],
-        occupation: [
+        "occupation": [
             "Actor",
             "Entrepreneur",
             "Owner of Elefino",
             "Host of 'Hollywoo Stars and Celebrities: What Do They Know? Do They Know Things?? Let's Find Out!' (formerly)",
             "Sales Associate at Lady FootLocker"
         ],
-        filmography: [
+        "filmography": [
             "Mr. Peanutbutter's House",
             "Hollywoo Stars and Celebrities: What Do They Know? Do They Know Things?? Let's Find Out! (HSAC!WDTK?DTKT??LFO!)",
             "Philbert",
