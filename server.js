@@ -14,7 +14,8 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
-app.use(express.static(path.resolve(__dirname, './view/build')));
+// app.use(express.static(path.resolve(__dirname, './view/build')));
+app.use(express.static('./static'))
 
 const fetching = async (table, filterColumn, param) => {
     // table as in endpoints
@@ -89,8 +90,8 @@ app.get("/api/seasons/:num", async (req, res) => {
     res.send(data)
 })
 
-app.get('*', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './view/build', 'index.html'))
+app.get('/', (req, res) => {
+   res.sendFile('./static/index.html')
 })
 
 app.listen(process.env.PORT || PORT, () => {
