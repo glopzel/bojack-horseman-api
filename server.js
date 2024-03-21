@@ -15,7 +15,15 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
 // app.use(express.static(path.resolve(__dirname, './view/build')));
-app.use(express.static('./static'))
+// app.use(express.static(path.join(__dirname, './view/build')));
+
+// app.use(express.static('./static'))
+app.use(express.static(path.join(__dirname, 'view/dist')));
+
+app.get('*', (req, res) => {
+    const pathToView = path.join(__dirname, './view/dist/', 'index.html')
+    res.sendFile(pathToView)
+})
 
 const fetching = async (table, filterColumn, param) => {
     // table as in endpoints
