@@ -4,7 +4,7 @@ const cors = require('cors');
 const path = require('path');
 const dotenv = require('dotenv');
 const { createClient } = require('@supabase/supabase-js')
-const PORT = 3001;
+const PORT = process.env.PORT || 4000;
 
 dotenv.config()
 
