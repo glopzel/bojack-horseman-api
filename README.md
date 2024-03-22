@@ -2,6 +2,10 @@
 
 This is an API of Bojack... Horseman obviously. So far it has ~100 characters, each with their name, species and voice person. 
 
+## Preview
+![bojack-api](https://github.com/glopzel/bojack-horseman-api/assets/74939915/e63b271a-88e5-49f6-a330-0044963f8e68)
+
+
 ## The link almighty
 
 Link to the site: [https://bojack-horseman-api.onrender.com](https://bojack-horseman-api.onrender.com) 
@@ -50,8 +54,15 @@ Get characters by species: `https://bojack-horseman-api.onrender.com/api/charact
 
 ## Tech used
 
-~~MongoDB~~ Supabase!, Node, Express, ~~React~~, ~~react-code-blocks and react-router-dom~~ and HTML (for now)
+- ~~MongoDB~~
+- Supabase!,
+- Node/Express 
+- ~~React~~ ~~react-code-blocks and react-router-dom~~
+- ~~HTML (for now)~~
+- Astro/Starlight!
+
+[![My Skills](https://skillicons.dev/icons?i=js,nodejs,express,supabase,astro)](https://skillicons.dev)
 
 ## Future Plans
-- astro/starlight ??? 
+- typescript it
 
