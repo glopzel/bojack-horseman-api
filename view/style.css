@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: hsl(228, 10%, 10%);
+    --light-primary-color: hsl(225, 15%, 16%);
+    --secondary-color: hsl(0, 0%, 96%);
+    --highlight-color: hsl(226, 100%, 86%);
+    --margin-body: 10%;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    color: whitesmoke;
+}
+
+h1 {
+    font-size: 5em;
+    font-size: clamp(1.5em,5vw,5em);
+}
+
+h2 {
+    border-bottom: 1px solid hsl(226, 100%, 86%);
+}
+
+h2, h3 {
+    padding: 0.5em 0;
+    margin-bottom: 1em;
+}
+
+h3 {
+    margin-left: 2em;
+    border-bottom: 1px dashed whitesmoke;
+}
+
+li {
+    list-style: none;
+}
+
+p, li {
+    font-size: 1.2em;
+}
+
+h3, p {
+    word-break: break-all;
+}
+
+header, footer {
+    background-color: var(--light-primary-color);
+    font-size: 1.2em;
+    padding: 1em 0;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 var(--margin-body);
+}
+
+.header__nav__links {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.header__nav__endpoints {
+    display: flex;
+    gap: 3em;
+}
+
+#nav__home {
+    color: hsl(226, 100%, 86%);
+    font-weight: 700;
+}
+
+/* bodies bodies bodies */
+.main__body {
+    background-image: url('assets/bojo2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-blend-mode: soft-light;
+    height: 100vh;
+}
+
+/* HOME */
+.homepage__main__hero {
+    margin: var(--margin-body);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+    height: 60vh;
+}
+
+.homepage__main__nav {
+    background-color: hsl(226, 100%, 86%);
+    padding: 1em 1.3em;
+    border-radius: 1.5em;
+    text-decoration: none;
+    color: rgb(23, 24, 28);
+}
+
+.homepage__main__nav:hover {
+    background-color: hsla(226, 100%, 86%, 0.839);
+}
+
+.link__text {
+    color: hsl(226, 100%, 86%);
+    word-break: break-all;
+}
+
+.container {
+    margin: 3em var(--margin-body);
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.container ul li {
+    list-style: circle;
+}
+
+/* CODE */
+pre {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+    overflow-x: scroll;
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 910px) {
+    .homepage__main__hero {
+        flex-direction: column;
+        justify-content: stretch;
+    }
+
+    h1, .homepage__main__hero p {
+        text-align: center;
+    }
+
+    pre {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 800px) {
+    .header__nav {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .header__nav__endpoints {
+        gap: 1em;
+    }
+
+    .homepage__main__hero {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+

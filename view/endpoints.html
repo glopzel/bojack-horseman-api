@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BoJack Horseman API endpoints</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body__endpoints">
+   <header>
+      <nav class="header__nav">
+         <li><a class="header__nav__links" id="nav__home" href="index.html">BoJack Horseman API</a></li>
+         <div class="header__nav__endpoints">
+            <li><a class="header__nav__links" href="base.html">Base URL</a></li>
+            <li><a class="header__nav__links" href="endpoints.html">Endpoints</a></li>
+         </div>
+      </nav>
+   </header>
+   <main class="container">
+      <div class="container__secondary">
+         <h2>Characters</h2>
+         <p>
+            All characters have 10 properties: id, name, voice, species, breed, first-ep, last-ep, occupation,
+            filmography. There are two ways to get single characters and their information:
+         </p>
+         <ul>
+            <li>Using their name</li>
+            <li>Using their id, a number between 1 - 100</li>
+         </ul>
+      </div>
+      <div class="container__secondary">
+         <h2>GET characters</h2>
+         <h3>GET single character by name</h3>
+         <p>
+            A request made to <a class="link__text"
+               href="https://bojack-horseman-api.onrender.com/api/characters/name/bojack%20horseman">{base
+               URL}/api/characters/name/bojack horseman</a> will return all the information of the character BoJack
+            Horseman.
+         </p>
+         <pre>
+<code>
+[
+   {
+       "name":"bojack horseman",
+       "voice":"will arnett",
+       "species":"horse",
+       "first-ep":"BoJack Horseman: The BoJack Horseman Story, Chapter One",
+       "last-ep":"Nice While It Lasted",
+       "breed":null,
+       "id":1,
+       "aliases":[
+          "BoJ",
+          "BJ",
+          "Chadwick Boseman",
+          "BJ Novak",
+          "BoJangles",
+          "JockJam DoorSlam",
+          "Hambone Fakenamington",
+          "BoBo the Angsty Zebra",
+          "Horse Guy",
+          "Horse Professor",
+          "Dead Body #4"
+       ],
+       "occupation":[
+          "Drama Professor at Wesleyan University (formerly)",
+          "actor",
+          "owner of the restaurand Elephante (formerly)",
+          "amateur standup comedian (formerly)",
+          "bartender at elefanté (formerly)"
+       ],
+       "filmography":[
+          "Secretariat",
+          "Horsin' Around",
+          "The BoJack Horseman Show",
+          "Hollywoo Stars and Celebrities: What Do They Know? Do They Know Things?? Let's Find Out! (HSAC!WDTK?DTKT??LFO!)",
+          "Ethan Around",
+          "Felicity Huffman's Booty Academy: Los Angeles",
+          "Philbert"
+      ]
+   }
+] 
+</code>
+</pre>
+      </div>
+      <div>
+         <h3>GET character by ID</h3>
+         <p>
+            In the previous result you can see that BoJack has an id of 1, so a request made to <a class="link__text"
+               href="https://bojack-horseman-api.onrender.com/api/characters/1">{base
+               URL}/api/characters/1</a> will return the same results as if it was made with the character's name.
+         </p>
+      </div>
+
+      <div>
+         <h2>GET multiple characters</h2>
+         <p>There are a two ways to get multiple characters through a request:</p>
+         <ul>
+            <li>By the voice actor</li>
+            <li>By the character species</li>
+         </ul>
+      </div>
+
+      <div>
+         <h3>GET characters by voice actor</h3>
+         <p>To get all the characters voiced by the same person you must make the request to
+            <code>{base URL}/characters/voice/{name}</code>. A GET request made to <a class="link__text"
+               href="https://bojack-horseman-api.onrender.com/api/characters/voice/alison%20brie">{base
+               URL}/characters/voice/alison brie</a> return the following:
+         </p>
+         <pre>
+<code>
+    [
+    {
+       "name":"diane nguyen",
+       "voice":"alison brie",
+       "species":"human",
+       "first-ep":"BoJack Horseman: The BoJack Horseman Story, Chapter One",
+       "last-ep":"Nice While It Lasted",
+       "breed":null,
+       "id":3,
+       "aliases":[
+          "Blarn",
+          "Deedee",
+          "Cryanne",
+          "Asian Daria",
+          "Diabolical Thin Mint",
+          "Glasses",
+          "Princess Diana/Diana Princess of Wales",
+          "Diana"
+       ],
+       "occupation":[
+          "Author of Ivy Tran, Food Court Detective",
+          "Writer",
+          "Ghostwriter (formerly)",
+          "Celebrity Tweet Ghostwriter",
+          "Consulting producer for 'Philbert' (formerly)",
+          "Character consultant for Secretariat (formerly)",
+          "Barista (formerly)",
+          "Caterer (formerly)"
+       ],
+       "filmography":null
+    },
+    {
+       "name":"joelle clarke",
+       "voice":"alison brie",
+       "species":"human",
+       "first-ep":"BoJack Horseman: The BoJack Horseman Story, Chapter One",
+       "last-ep":"Still Broken",
+       "breed":null,
+       "id":64,
+       "aliases":[
+          "Juliet's Nurse (current role portrayal)",
+          "Olivia (Character on Horsin' Around, formerly)"
+       ],
+       "occupation":[
+          "Actress"
+       ],
+       "filmography":[
+          "Horsin' Around",
+          "Romeo & Juliet"
+       ]
+    },
+    {
+       "name":"vincent adultman",
+       "voice":"alison brie",
+       "species":"human",
+       "first-ep":"Horse Majeure",
+       "last-ep":"Higher Love",
+       "breed":null,
+       "id":8,
+       "aliases":[
+          "Kevin",
+          "Three Kids stacked up on each other"
+       ],
+       "occupation":[
+          "Business Manager"
+       ],
+       "filmography":null
+    },
+    {
+       "name":"cammie",
+       "voice":"alison brie",
+       "species":"human",
+       "first-ep":"The Telescope",
+       "last-ep":"A Horse Walks Into Rehab",
+       "breed":null,
+       "id":46,
+       "aliases":null,
+       "occupation":[
+          "Member of the Celebrity Stealing Club"
+       ],
+       "filmography":null
+    }
+ ]
+</code>
+</pre>
+      </div>
+
+      <div>
+         <h3>GET character by species</h3>
+      </div>
+
+      <div>
+         <h2>GET seasons</h2>
+         <p>
+            The endpoint <a class="link__text"
+               href="https://bojack-horseman-api.onrender.com/api/characters/seasons">{base URL}/seasons</a>
+            returns all seasons with their info. To get a single season you must use the endpoint
+            <code>{base URL}/seasons/{1 - 6}</code>. If you make the request to <a class="link__text"
+               href="https://bojack-horseman-api.onrender.com/api/seasons/1">{base URL}/seasons/1</a> you get the
+            following result:
+         </p>
+         <pre>
+<code>
+[
+    {
+       "id":1,
+       "season":"1",
+       "year":2014,
+       "episodes":[
+          "BoJack Horseman: The BoJack Horseman Story, Chapter One",
+          "BoJack Hates The Troops",
+          "Prickly Muffin",
+          "Zoës And Zeldas",
+          "Live Fast, Diane Nguyen",
+          "Our A-Story Is A 'D' Story",
+          "Say Anything",
+          "The Telescope",
+          "Horse Majeure",
+          "One Trick Pony",
+          "Downer Ending",
+          "Later"
+       ]
+    }
+ ]
+</code>
+</pre>
+
+      </div>
+   </main>
+</body>
+
+</html>
